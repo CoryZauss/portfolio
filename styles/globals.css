@@ -33,6 +33,11 @@ body {
 
 }
 
+.main{
+  display: flex;
+  height: 80vh;
+  border: 1px red solid;
+}
 
 /* slider for dark light modes */
 
@@ -97,6 +102,19 @@ input:checked + .slider:before {
 }
 
 /* customs */
+.theme-moon{
+  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);
+}
+.theme-sun{
+  filter: invert(28%) sepia(89%) saturate(2476%) hue-rotate(26deg) brightness(118%) contrast(119%);
+  width: 1rem;
+}
+.sun-moon{
+  width: 2rem;
+  padding-left: .3rem;
+}
+
+/* nav container and socials container */
 .socials,
 .nav-container {
   display: flex;
@@ -107,15 +125,8 @@ input:checked + .slider:before {
   flex-direction: row-reverse;
   margin-top: 1rem;
   border: 1px green solid;
-  color: var(--color-primary);
 
 }
-
-.icon,
-.navlink {
-  padding: 1rem;
-}
-
 
 .socials{
   border: 1px blue solid;
@@ -126,10 +137,13 @@ input:checked + .slider:before {
   width: 4rem;
 }
 
-.main{
-  display: flex;
-  height: 80vh;
-  align-items:center;
-  justify-items:center;
-  border: 1px red solid;
+.icon,
+.navlink {
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--color-primary);
 }
+
+
+/* main area /hero section */
+
