@@ -96,30 +96,34 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-//customs
+/* customs */
 .socials,
-.nav-contianer {
+.nav-container {
   display: flex;
-  postions: relative;
-  height: 10vh;
-  justify-content: space-between;
+  height: 4rem;
 }
 
-.nav-contianer {
+.nav-container {
   flex-direction: row-reverse;
-  align-items: flex-end;
+  margin-top: 1rem;
   border: 1px green solid;
+  color: var(--color-primary);
+
 }
 
 .icon,
 .navlink {
   padding: 1rem;
-  height: 5vh
 }
 
-.footer{
-  height: 10vh;
+
+.socials{
   border: 1px blue solid;
+  justify-content: center;
+}
+
+.icon {
+  width: 4rem;
 }
 
 .main{

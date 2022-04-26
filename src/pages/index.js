@@ -1,25 +1,24 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Nav from '../components/Nav'
-import Socials from '../components/Socials'
-import { useEffect, useState } from 'react'
+import Head from "next/head";
+import Image from "next/image";
+import Nav from "../components/Nav";
+import Socials from "../components/Socials";
+import { useEffect, useState } from "react";
 
 export default function Home() {
-  const [darkTheme, setDarkTheme] = useState('')
+  const [darkTheme, setDarkTheme] = useState("");
 
   const handleToggle = (e) => {
-    setDarkTheme(e.target.checked)
-  }
+    setDarkTheme(e.target.checked);
+  };
 
   useEffect(() => {
-    if (darkTheme !== '') {
+    if (darkTheme !== "") {
       if (darkTheme) {
         document.documentElement.setAttribute("data-theme", "dark");
-        window.localStorage.setItem("theme", "dark")
-      }
-      else {
+        window.localStorage.setItem("theme", "dark");
+      } else {
         document.documentElement.removeAttribute("data-theme");
-        window.localStorage.setItem("theme", "light")
+        window.localStorage.setItem("theme", "light");
       }
     }
   }, [darkTheme]);
@@ -29,19 +28,16 @@ export default function Home() {
     const initialColorValue = root.style.getPropertyValue(
       "--initial-color-mode"
     );
-    setDarkTheme(initialColorValue === "dark")
-  }, [])
+    setDarkTheme(initialColorValue === "dark");
+  }, []);
 
   return (
-    <div >
-
-      <Nav changetheme={handleToggle} darktheme={darkTheme}/>
-      <main className="main">
-        stuff
-      </main>
+    <div>
+      <Nav changetheme={handleToggle} darktheme={darkTheme} />
+      <main className="main">stuff</main>
       <footer className="footer">
-        <Socials/>
+        <Socials />
       </footer>
     </div>
-  )
+  );
 }
