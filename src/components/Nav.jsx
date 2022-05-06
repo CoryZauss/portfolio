@@ -27,7 +27,6 @@ export default function Nav({darktheme, changetheme}) {
 
   useEffect(() => {
     const root = window.document.documentElement;
-    console.log(root.style)
     const initialColorValue = root.style.getPropertyValue(
       "--initial-color-mode"
     );
