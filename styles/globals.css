@@ -114,6 +114,8 @@ input:checked + .slider:before {
 }
 
 /* nav container and socials container */
+
+
 .socials,
 .nav-container {
   display: flex;
@@ -123,11 +125,11 @@ input:checked + .slider:before {
 .nav-container {
   flex-direction: row-reverse;
   margin-top: 1rem;
+  padding:1vw;
 
 }
 
 .socials {
-
   justify-content: center;
 }
 
@@ -160,12 +162,21 @@ input:checked + .slider:before {
 }
 
 .about-section{
-  margin-left:25%;
+  margin-left:15%;
+  font-size:1.2rem;
 }
 
 .about-me{
   list-style: none;
   margin-left: 15px
+}
+.about-me-2{
+  list-style: none;
+  margin-left: 25px
+}
+.about-me-3{
+  list-style: none;
+  margin-left: 35px
 }
 
 .resume-button{
@@ -180,4 +191,17 @@ input:checked + .slider:before {
   margin-left: 65%;
   width:10%;
   min-width: 100px;
+}
+
+
+/*mobile */
+@media only screen and (min-width: 320px) and (max-width: 848px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .icon {
+    width: 3rem;
+  }
+
 }

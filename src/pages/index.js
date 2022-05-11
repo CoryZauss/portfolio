@@ -19,9 +19,9 @@ const Home = () => {
           </div>
           <div className="about-section">
             <p>Hey Im Cory,</p>
-            <li className="about-me">I am a passionate software engineer</li>
-            <li className="about-me">Creative Thinker</li>
-            <li className="about-me">Problem Solver</li>
+            <li className="about-me">A passionate software engineer</li>
+            <li className="about-me-2">Creative Thinker</li>
+            <li className="about-me-3">Problem Solver</li>
           </div>
         <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"><button className="resume-button">Resume</button></a>
         </main>
