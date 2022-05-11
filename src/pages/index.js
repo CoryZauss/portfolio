@@ -6,6 +6,7 @@ import Nav from "../components/Nav";
 import SideDrawer from "../components/SideDrawer";
 import Socials from "../components/Socials";
 import DrawerToggle from "../components/DrawerToggle";
+import BackDrop from "../components/BackDrop"
 
 import me from "../assets/me1.jpg";
 import moon from "../assets/icons/moon-solid.svg";
@@ -21,10 +22,11 @@ const Home = () => {
   return (
     <>
       <div className="page-container">
+        {drawerOpen && <BackDrop toggle={toggleDrawer} /> }
         <div className="burger">
           <DrawerToggle toggle={toggleDrawer}/>
         </div>
-        {drawerOpen && <SideDrawer toggle={toggleDrawer}/>}
+        {drawerOpen && <SideDrawer toggle={toggleDrawer} /> }
 
         <div className="navbar">
           <Nav />
