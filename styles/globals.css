@@ -189,8 +189,12 @@ input:checked + .slider:before {
   display: inline-block;
   font-size: 1rem;
   margin-left: 65%;
-  width:10%;
+  width:15%;
   min-width: 100px;
+}
+
+.resume-button:hover{
+  background-color: darkblue;
 }
 
 
@@ -203,5 +207,18 @@ input:checked + .slider:before {
   .icon {
     width: 3rem;
   }
-
+  .resume-button{
+    background-color: blue;
+    border: none;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    margin-left: 25%;
+    margin-top:1rem;
+    width:300px;
+    min-width: 100px;
+  }
 }
