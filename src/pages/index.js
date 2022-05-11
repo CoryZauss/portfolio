@@ -19,6 +19,34 @@ const Home = () => {
     setDrawerOpen(!drawerOpen);
   }
 
+  const [darkTheme, setDarkTheme] = useState('');
+
+  const handleToggle = (event) => {
+    setDarkTheme(event.target.checked);
+  };
+
+  useEffect(() => {
+    if (darkTheme !== '') {
+      if (darkTheme) {
+        // Set value of  darkmode to dark
+        document.documentElement.setAttribute("data-theme", "dark");
+        window.localStorage.setItem("theme", "dark");
+      } else {
+        // Set value of  darkmode to light
+        document.documentElement.removeAttribute("data-theme");
+        window.localStorage.setItem("theme", "light");
+      }
+    }
+  }, [darkTheme]);
+
+  useEffect(() => {
+    const root = window.document.documentElement;
+    const initialColorValue = root.style.getPropertyValue(
+      "--initial-color-mode"
+    );
+    // Set initial darkmode to light
+    setDarkTheme(initialColorValue === "dark");
+  }, []);
   return (
     <>
       <div className="page-container">
@@ -26,10 +54,10 @@ const Home = () => {
         <div className="burger">
           <DrawerToggle toggle={toggleDrawer}/>
         </div>
-        {drawerOpen && <SideDrawer toggle={toggleDrawer} /> }
+        {drawerOpen && <SideDrawer toggle={toggleDrawer} darktheme={darkTheme} changetheme={ handleToggle}/> }
 
         <div className="navbar">
-          <Nav />
+          <Nav darktheme={darkTheme} changetheme={handleToggle}/>
         </div>
         <main className="main">
           <div className="my-pic">
