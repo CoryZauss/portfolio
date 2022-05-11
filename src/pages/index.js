@@ -5,21 +5,27 @@ import Image from "next/image";
 import Nav from "../components/Nav";
 import SideDrawer from "../components/SideDrawer";
 import Socials from "../components/Socials";
-import DrawerToggle from '../components/DrawerToggle';
+import DrawerToggle from "../components/DrawerToggle";
 
 import me from "../assets/me1.jpg";
 import moon from "../assets/icons/moon-solid.svg";
 import sun from "../assets/icons/sun-solid.svg";
 
-
 const Home = () => {
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const toggleDrawer = () => {
+    setDrawerOpen(!drawerOpen);
+  }
+
   return (
     <>
       <div className="page-container">
         <div className="burger">
-          <DrawerToggle />
-          <SideDrawer/>
+          <DrawerToggle toggle={toggleDrawer}/>
         </div>
+        {drawerOpen && <SideDrawer toggle={toggleDrawer}/>}
+
         <div className="navbar">
           <Nav />
         </div>
@@ -33,7 +39,9 @@ const Home = () => {
             <li className="about-me-2">Creative Thinker</li>
             <li className="about-me-3">Problem Solver</li>
           </div>
-        <a href="/resume.pdf" target="_blank" rel="noopener noreferrer"><button className="resume-button">Resume</button></a>
+          <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            <button className="resume-button">Resume</button>
+          </a>
         </main>
         <Socials />
       </div>
