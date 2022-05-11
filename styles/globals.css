@@ -35,7 +35,9 @@ p {
 }
 
 
-
+.page-container{
+  height:100%;
+}
 
 /* slider for dark light modes */
 
@@ -115,6 +117,40 @@ input:checked + .slider:before {
 
 /* nav container and socials container */
 
+.toggle-button{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  height: 2rem;
+  width: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.toggle-button:focus {
+  outline: none;
+}
+
+.toggle-button-line{
+  width: 30px;
+  height:2px;
+  background:  var(--color-primary)
+}
+
+.side-drawer{
+  height:100%;
+  background: var(--color-background);
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top:0;
+  right:0;
+  width:70%;
+  z-index: 300;
+  font-size: 2rem;
+}
 
 .socials,
 .nav-container {
@@ -220,5 +256,18 @@ input:checked + .slider:before {
     margin-top:1rem;
     width:300px;
     min-width: 100px;
+  }
+  .navbar{
+    display:none;
+  }
+}
+
+/* non mobile only*/
+@media only screen and (min-width: 848px) {
+  .side-drawer{
+    display: none;
+  }
+  .burger{
+    display:none;
   }
 }

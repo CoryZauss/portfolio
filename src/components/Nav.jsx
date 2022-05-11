@@ -4,6 +4,7 @@ import moon from "../assets/icons/moon-solid.svg";
 import sun from "../assets/icons/sun-solid.svg";
 import { useEffect, useState } from "react";
 
+
 export default function Nav({darktheme, changetheme}) {
   const [darkTheme, setDarkTheme] = useState('');
 
@@ -53,12 +54,12 @@ export default function Nav({darktheme, changetheme}) {
       <Link href="/">
         <a className="navlink">Home</a>
       </Link>
-      <Link href="/projects" style={{ textDecoration: "none" }}>
+      <Link href="/about" style={{ textDecoration: "none" }}>
         <a className="navlink">About Me</a>
       </Link>
-      <Link href="/projects" style={{ textDecoration: "none" }}>
+
         <a className="navlink" href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
-      </Link>
+
       <Link href="/projects">
         <a className="navlink">Projects</a>
       </Link>
