@@ -57,7 +57,7 @@ export default function Nav({darktheme, changetheme}) {
         <a className="navlink">About Me</a>
       </Link>
       <Link href="/projects" style={{ textDecoration: "none" }}>
-        <a className="navlink">Resume</a>
+        <a className="navlink" href="/resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
       </Link>
       <Link href="/projects">
         <a className="navlink">Projects</a>

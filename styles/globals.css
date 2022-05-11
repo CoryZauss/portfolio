@@ -35,12 +35,7 @@ p {
 }
 
 
-.main {
-  display: flex;
-  height: 60vh;
-  border: 1px red solid;
-  flex-direction: column;
-}
+
 
 /* slider for dark light modes */
 
@@ -128,11 +123,11 @@ input:checked + .slider:before {
 .nav-container {
   flex-direction: row-reverse;
   margin-top: 1rem;
-  border: 1px green solid;
+
 }
 
 .socials {
-  border: 1px blue solid;
+
   justify-content: center;
 }
 
@@ -148,10 +143,41 @@ input:checked + .slider:before {
 }
 
 /* main area /hero section */
+.main {
+  display: flex;
+  height: 60vh;
+
+  flex-direction: column;
+  justify-content: center;
+}
 
 .my-pic {
   border-radius: 50%;
   width: 15rem;
   height: 15rem;
   overflow: hidden;
+  margin-left:20%;
+}
+
+.about-section{
+  margin-left:25%;
+}
+
+.about-me{
+  list-style: none;
+  margin-left: 15px
+}
+
+.resume-button{
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  margin-left: 65%;
+  width:10%;
+  min-width: 100px;
 }

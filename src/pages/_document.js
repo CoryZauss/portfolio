@@ -22,6 +22,7 @@ class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
+        <title>Cory Zauss</title>
         <Head></Head>
         <body>
           <script
