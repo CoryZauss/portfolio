@@ -120,8 +120,8 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 2rem;
-  width: 2rem;
+  height: 30px;
+  width: 30px;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -135,7 +135,7 @@ input:checked + .slider:before {
 
 .toggle-button-line {
   width: 30px;
-  height: 2px;
+  height: 4px;
   background: var(--color-primary);
 }
 
@@ -148,7 +148,7 @@ input:checked + .slider:before {
   right: 0;
   width: 70%;
   z-index: 300;
-  font-size: 24px;
+  font-size: 64px;
   padding-right: 10px;
 
 }
@@ -164,11 +164,12 @@ input:checked + .slider:before {
 
 .inside-toggle {
   margin-left: 90%;
-  margin-top: 10px;
+  margin-top: 30px;
+  height: 50px;
 }
 
 .burger{
-  margin-left: 95%;
+  margin-left: 90%;
   margin-top: 10px;
 }
 
@@ -278,6 +279,19 @@ input:checked + .slider:before {
   .navbar {
     display: none;
   }
+  .switch {
+    width: 100px;
+    height: 54px;
+  }
+  .slider:before {
+    height: 48px;
+    width: 48px;
+  }
+  input:checked + .slider:before {
+    -webkit-transform: translateX(44px);
+    -ms-transform: translateX(44px);
+    transform: translateX(44px);
+  }
 }
 
 /* non mobile only*/
@@ -288,4 +302,5 @@ input:checked + .slider:before {
   .burger {
     display: none;
   }
+
 }
