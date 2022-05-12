@@ -244,9 +244,9 @@ input:checked + .slider:before {
   text-decoration: none;
   display: inline-block;
   font-size: 1rem;
-  margin-left: 65%;
+  margin-left: 50%;
   width: 15%;
-  min-width: 100px;
+  min-width: 60px;
 }
 
 .resume-button:hover {
@@ -273,7 +273,7 @@ input:checked + .slider:before {
     font-size: 1rem;
     margin-left: 25%;
     margin-top: 1rem;
-    width: 300px;
+    width: 200px;
     min-width: 100px;
   }
   .navbar {
