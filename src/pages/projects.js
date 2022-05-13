@@ -7,7 +7,7 @@ export default function Projects() {
     <>
       <Nav />
       <main>
-        <div>projects that ive done</div>
+        <div>Coming Soon...</div>
       </main>
     </>
   );
