@@ -4,10 +4,11 @@ import moon from "../assets/icons/moon-solid.svg";
 import sun from "../assets/icons/sun-solid.svg";
 import { useEffect, useState } from "react";
 
-export default function Nav({ darktheme, changetheme, changecomponent }) {
+export default function Nav({ darktheme, changetheme, changecomponent, current }) {
 
   return (
     <div className="nav-container">
+      <div className="nav-bg"></div>
       <div className="sun-moon">
         {darktheme === true ? (
           <Image src={moon} alt="moon" className="theme-moon" />
@@ -24,9 +25,9 @@ export default function Nav({ darktheme, changetheme, changecomponent }) {
         </form>
       )}
 
-      <a className="navlink home-link" onClick={()=>changecomponent('home')}>Home</a>
+      <a className={`navlink home-link ${current === 'home' && "current-page"}`} onClick={()=>changecomponent('home')}>Home</a>
 
-      <a className="navlink about-link" onClick={()=>changecomponent('about')}>About Me</a>
+      <a className={`navlink about-link ${current === 'about' && "current-page"}`} onClick={()=>changecomponent('about')}>About Me</a>
 
       <a
         className="navlink"
@@ -37,7 +38,7 @@ export default function Nav({ darktheme, changetheme, changecomponent }) {
         Resume
       </a>
 
-      <a className="navlink projects-link" onClick={()=>changecomponent('projects')}>
+      <a className={`navlink projects-link ${current === 'projects' && "current-page"}`} onClick={()=>changecomponent('projects')}>
         Projects
       </a>
     </div>

@@ -71,14 +71,16 @@ const Home = () => {
             darktheme={darkTheme}
             changetheme={handleToggle}
             changecomponent={toggleComp}
-          />
-        )}
+            current={currentComponent}
+            />
+            )}
 
         <div className="navbar">
           <Nav
             darktheme={darkTheme}
             changetheme={handleToggle}
             changecomponent={toggleComp}
+            current={currentComponent}
           />
         </div>
         <main className="main">

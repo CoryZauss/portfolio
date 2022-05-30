@@ -8,6 +8,7 @@
   --color-button-text: rgb(255, 255, 255);
   --color-background: #fff;
   --color-anchor: #000aff;
+  --color-selected:#000aff;
 }
 
 [data-theme="dark"] {
@@ -18,6 +19,7 @@
   --color-button-text: rgb(0, 0, 0);
   --color-background: #22212b;
   --color-anchor: #00ff4c;
+  --color-selected:#00ff4c;
 }
 
 body {
@@ -154,7 +156,7 @@ input:checked + .slider:before {
 }
 
 .backdrop{
-  position: absolute;
+  position: fixed;
   transform: translate(-20px, -20px);
   width:200%;
   height:200%;
@@ -198,19 +200,25 @@ input:checked + .slider:before {
   padding: 1rem;
   text-decoration: none;
   color: var(--color-primary);
+  font-size: 2rem;
 }
 
 .navlink:hover{
   cursor: pointer;
 }
 
+.current-page {
+  color: var(--color-selected);
+  text-shadow: 0px 0px 6px var(--color-selected)
+}
 /* main area /hero section */
 .main {
   display: flex;
-  height: 60vh;
-
+  height: 80vh;
   flex-direction: column;
   justify-content: center;
+  overflow: scroll;
+
 }
 
 .my-pic {
@@ -265,13 +273,28 @@ input:checked + .slider:before {
 .projects-page{
   margin: 10%;
   font-size: 1.2rem;
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.projects-title{
-  font-size: 2.5rem;
+
+.project-tile {
+  border: 1px var(--color-primary) solid;
+  margin: 1rem;
+  padding: .5rem;
+  height: 30vw;
+  width: 30vw;
+  max-height: 300px;
+  max-width: 300px;
+  position: relative;
+}
+.project-tile:hover{
+  border: blue 1px solid;
 }
 
+.projects-page{
+  margin-top: 25rem;
+}
 
 /*mobile */
 @media only screen and (min-width: 320px) and (max-width: 848px) {
@@ -312,6 +335,11 @@ input:checked + .slider:before {
     -ms-transform: translateX(44px);
     transform: translateX(44px);
   }
+  .about-page{
+    font-size: 1rem;
+    padding-top:5rem;
+  }
+
 }
 
 /* non mobile only*/
