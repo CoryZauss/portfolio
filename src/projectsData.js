@@ -28,7 +28,7 @@ module.exports = {
     {
       title: "Timeless FrontEnd",
       github: "https://github.com/Poseidon-rfe7/CatWalk",
-      gif: "",
+      gif: "https://user-images.githubusercontent.com/89159410/153037509-f06d18e1-04db-43ef-b809-5dbe33e1e482.gif",
       screenshot: "",
       description: "Front-end portal for an e-commerce application",
       techStack: ["React", "Node.js / Express"],
