@@ -200,6 +200,10 @@ input:checked + .slider:before {
   color: var(--color-primary);
 }
 
+.navlink:hover{
+  cursor: pointer;
+}
+
 /* main area /hero section */
 .main {
   display: flex;
