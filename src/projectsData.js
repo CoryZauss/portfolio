@@ -1,11 +1,11 @@
 module.exports = {
   projects: [
     {
-      title: "StarWars",
+      title: "StarWars encyclopedia",
       github: "https://github.com/CoryZauss/StarWars",
       gif: "https://user-images.githubusercontent.com/89159410/159531938-3d83a420-bdfd-47d2-a78d-621c53ceee98.gif",
       screenshot: "",
-      description: "Front end React app to interface with open source star wars API",
+      description: "Front end React app to interface with open source star wars API, explore information about characters and relations, planets, vehicles, starships and more",
       techStack: ["React"],
     },
     {
