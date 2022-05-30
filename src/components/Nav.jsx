@@ -1,4 +1,4 @@
-import Link from "next/link";
+
 import Image from "next/image";
 import moon from "../assets/icons/moon-solid.svg";
 import sun from "../assets/icons/sun-solid.svg";
