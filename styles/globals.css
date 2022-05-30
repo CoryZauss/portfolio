@@ -289,7 +289,7 @@ input:checked + .slider:before {
   position: relative;
 }
 .project-tile:hover{
-  border: blue 1px solid;
+  border: var(--color-selected) 1px solid;
 }
 
 .projects-page{
