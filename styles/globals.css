@@ -365,7 +365,9 @@ input:checked + .slider:before {
     font-size: 1rem;
     padding-top:5rem;
   }
-
+  .main {
+    height: 70vh;
+  }
 }
 
 /* non mobile only*/
