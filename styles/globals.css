@@ -8,7 +8,8 @@
   --color-button-text: rgb(255, 255, 255);
   --color-background: #fff;
   --color-anchor: #000aff;
-  --color-selected:#000aff;
+  --color-selected: #000aff;
+  --color-hover: #000dde;
 }
 
 [data-theme="dark"] {
@@ -19,7 +20,8 @@
   --color-button-text: rgb(0, 0, 0);
   --color-background: #22212b;
   --color-anchor: #00ff4c;
-  --color-selected:#00ff4c;
+  --color-selected: #00ff4c;
+  --color-hover: #00aa4c;
 }
 
 body {
@@ -152,16 +154,15 @@ input:checked + .slider:before {
   z-index: 300;
   font-size: 64px;
   padding-right: 10px;
-
 }
 
-.backdrop{
+.backdrop {
   position: fixed;
   transform: translate(-20px, -20px);
-  width:200%;
-  height:200%;
+  width: 200%;
+  height: 200%;
   background-color: rgba(0, 0, 0, 0.8);
-  z-index:200;
+  z-index: 200;
 }
 
 .inside-toggle {
@@ -170,7 +171,7 @@ input:checked + .slider:before {
   height: 50px;
 }
 
-.burger{
+.burger {
   margin-left: 90%;
   margin-top: 10px;
 }
@@ -203,13 +204,13 @@ input:checked + .slider:before {
   font-size: 2rem;
 }
 
-.navlink:hover{
+.navlink:hover {
   cursor: pointer;
 }
 
 .current-page {
   color: var(--color-selected);
-  text-shadow: 0px 0px 6px var(--color-selected)
+  text-shadow: 0px 0px 6px var(--color-selected);
 }
 /* main area /hero section */
 .main {
@@ -218,12 +219,12 @@ input:checked + .slider:before {
   flex-direction: column;
   justify-content: center;
   overflow: scroll;
-
 }
 
 .my-pic {
+  border: 1px var(--color-selected) solid;
   border-radius: 50%;
-  width: 15rem;
+  width: 16rem;
   height: 15rem;
   overflow: hidden;
   margin-left: 20%;
@@ -248,9 +249,9 @@ input:checked + .slider:before {
 }
 
 .resume-button {
-  background-color: blue;
+  background-color: var(--color-selected);
   border: none;
-  color: white;
+  color: var(--color-background);
   padding: 1rem;
   text-align: center;
   text-decoration: none;
@@ -262,43 +263,42 @@ input:checked + .slider:before {
 }
 
 .resume-button:hover {
-  background-color: darkblue;
+  background-color: var(--color-hover);
 }
 
-.about-page{
+.about-page {
   margin: 10%;
   font-size: 1.2rem;
 }
 
-.projects-page{
+.projects-page {
   margin: 10%;
   font-size: 1.2rem;
   display: flex;
   flex-wrap: wrap;
 }
 
-
 .project-tile {
   border: 1px var(--color-primary) solid;
   margin: 1rem;
-  padding: .5rem;
+  padding: 0.5rem;
   height: 20vw;
   width: 30vw;
   max-height: 300px;
   max-width: 300px;
   position: relative;
 }
-.project-tile:hover{
+.project-tile:hover {
   border: var(--color-selected) 1px solid;
 }
 
-.projects-page{
+.projects-page {
   margin-top: 10rem;
 }
 
 /*MODAL*/
 
-.modal-tile{
+.modal-tile {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -310,15 +310,15 @@ input:checked + .slider:before {
   padding: 1rem;
   border-radius: 6px;
 }
-.modal-title{
-  color: var(--color-selected)
+.modal-title {
+  color: var(--color-selected);
 }
 
-.github-link{
+.github-link {
   text-decoration: none;
   color: var(--color-selected);
 }
-.github-link:hover{
+.github-link:hover {
   color: var(--color-selected);
   text-shadow: 0px 0px 6px var(--color-selected);
 }
@@ -333,9 +333,7 @@ input:checked + .slider:before {
     width: 3rem;
   }
   .resume-button {
-    background-color: blue;
     border: none;
-    color: white;
     padding: 1rem;
     text-align: center;
     text-decoration: none;
@@ -346,29 +344,34 @@ input:checked + .slider:before {
     width: 200px;
     min-width: 100px;
   }
+
   .navbar {
     display: none;
   }
+
   .switch {
     width: 100px;
     height: 54px;
   }
+
   .slider:before {
     height: 48px;
     width: 48px;
   }
+
   input:checked + .slider:before {
     -webkit-transform: translateX(44px);
     -ms-transform: translateX(44px);
     transform: translateX(44px);
   }
-  .about-page{
-    font-size: .9rem;
+
+  .about-page {
+    font-size: 0.9rem;
     margin-top: 10rem;
   }
+
   .main {
     height: 70vh;
-
   }
 }
 
@@ -380,5 +383,4 @@ input:checked + .slider:before {
   .burger {
     display: none;
   }
-
 }

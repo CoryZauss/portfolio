@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <div className="home">
       <div className="my-pic">
-        <Image alt="me" src={me} />
+        <Image alt="me" src={me} layout="intrinsic"/>
       </div>
       <div className="about-section">
         <p>Hey Im Cory,</p>
