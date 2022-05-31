@@ -308,6 +308,7 @@ input:checked + .slider:before {
   border: 1px var(--color-selected) solid;
   position: fixed;
   padding: 1rem;
+  border-radius: 6px;
 }
 .modal-title{
   color: var(--color-selected)
@@ -362,11 +363,12 @@ input:checked + .slider:before {
     transform: translateX(44px);
   }
   .about-page{
-    font-size: 1rem;
-    padding-top:5rem;
+    font-size: .9rem;
+    margin-top: 10rem;
   }
   .main {
     height: 70vh;
+
   }
 }
 
