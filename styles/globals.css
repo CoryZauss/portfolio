@@ -6,7 +6,7 @@
   --color-button: #3d486c;
   --color-paragraph: #797979;
   --color-button-text: rgb(255, 255, 255);
-  --color-background: #fff;
+  --color-background: rgb(200, 200, 200);
   --color-anchor: #000aff;
   --color-selected: #000aff;
   --color-hover: #000dde;
@@ -64,7 +64,7 @@ p {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #aaa;
   -webkit-transition: 0.4s;
   transition: 0.4s;
 }
