@@ -215,14 +215,14 @@ input:checked + .slider:before {
 /* main area /hero section */
 .main {
   display: flex;
-  height: 80vh;
+  height: 70vh;
   flex-direction: column;
   justify-content: center;
   overflow: scroll;
 }
 
 .my-pic {
-  border: 1px var(--color-selected) solid;
+  border: 2px var(--color-selected) solid;
   border-radius: 50%;
   width: 16rem;
   height: 15rem;
@@ -284,8 +284,8 @@ input:checked + .slider:before {
   padding: 0.5rem;
   height: 20vw;
   width: 30vw;
-  max-height: 300px;
-  max-width: 300px;
+  max-height: 200px;
+  max-width: 250px;
   position: relative;
 }
 .project-tile:hover {
