@@ -220,6 +220,12 @@ input:checked + .slider:before {
   flex-direction: column;
   justify-content: center;
   overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none; /* Firefox */
+}
+
+.main::-webkit-scrollbar {
+  display: none;
 }
 
 .my-pic {
@@ -349,7 +355,7 @@ input:checked + .slider:before {
     flex-direction: column;
     align-items: flex-end;
   }
-  
+
   .icon {
     width: 3rem;
   }
