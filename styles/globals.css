@@ -212,6 +212,7 @@ input:checked + .slider:before {
   color: var(--color-selected);
   text-shadow: 0px 0px 6px var(--color-selected);
 }
+
 /* main area /hero section */
 .main {
   display: flex;
@@ -230,23 +231,41 @@ input:checked + .slider:before {
   margin-left: 20%;
 }
 
-.about-section {
-  margin-left: 15%;
-  font-size: 1.2rem;
-}
-
 .about-me {
   list-style: none;
   margin-left: 15px;
 }
+
 .about-me-2 {
   list-style: none;
   margin-left: 25px;
 }
+
 .about-me-3 {
   list-style: none;
   margin-left: 35px;
 }
+
+/*about page*/
+.about-section {
+  margin-left: 15%;
+  font-size: 1.2rem;
+}
+.about-title {
+  text-decoration: underline;
+}
+
+.top-skills {
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skills-icon {
+  width: 10rem;
+  padding: 1rem;
+}
+/* end about */
 
 .resume-button {
   background-color: var(--color-selected);
@@ -269,6 +288,7 @@ input:checked + .slider:before {
 .about-page {
   margin: 10%;
   font-size: 1.2rem;
+  margin-top: 20rem;
 }
 
 .projects-page {
@@ -366,12 +386,25 @@ input:checked + .slider:before {
   }
 
   .about-page {
-    font-size: 0.9rem;
-    margin-top: 10rem;
+    font-size: 1rem;
+    margin-top: 50rem;
   }
 
   .main {
     height: 70vh;
+  }
+
+  .modal-tile {
+    width: 85vw;
+    margin-left: 0;
+  }
+
+  .skills-icon {
+    width: 5rem;
+  }
+
+  .top-skills {
+    flex-direction: column;
   }
 }
 

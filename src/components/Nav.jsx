@@ -24,11 +24,6 @@ export default function Nav({ darktheme, changetheme, changecomponent, current }
           </label>
         </form>
       )}
-
-      <a className={`navlink home-link ${current === 'home' && "current-page"}`} onClick={()=>changecomponent('home')}>Home</a>
-
-      <a className={`navlink about-link ${current === 'about' && "current-page"}`} onClick={()=>changecomponent('about')}>About Me</a>
-
       <a
         className="navlink"
         href="/resume.pdf"
@@ -41,6 +36,11 @@ export default function Nav({ darktheme, changetheme, changecomponent, current }
       <a className={`navlink projects-link ${current === 'projects' && "current-page"}`} onClick={()=>changecomponent('projects')}>
         Projects
       </a>
+
+      <a className={`navlink about-link ${current === 'about' && "current-page"}`} onClick={()=>changecomponent('about')}>About Me</a>
+
+
+      <a className={`navlink home-link ${current === 'home' && "current-page"}`} onClick={()=>changecomponent('home')}>Home</a>
     </div>
   );
 }
