@@ -7,8 +7,9 @@ import { useEffect, useState } from "react";
 export default function Nav({ darktheme, changetheme, changecomponent, current }) {
 
   return (
-    <div className="nav-container">
+    <>
       <div className="nav-bg"></div>
+    <div className="nav-container">
       <div className="sun-moon">
         {darktheme === true ? (
           <Image src={moon} alt="moon" className="theme-moon" />
@@ -41,6 +42,7 @@ export default function Nav({ darktheme, changetheme, changecomponent, current }
 
 
       <a className={`navlink home-link ${current === 'home' && "current-page"}`} onClick={()=>changecomponent('home')}>Home</a>
-    </div>
+      </div>
+      </>
   );
 }
