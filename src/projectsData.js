@@ -1,19 +1,12 @@
 module.exports = {
   projects: [
+
     {
-      title: "StarWars encyclopedia",
-      github: "https://github.com/CoryZauss/StarWars",
-      gif: "https://user-images.githubusercontent.com/89159410/159531938-3d83a420-bdfd-47d2-a78d-621c53ceee98.gif",
-      screenshot: "",
-      description: "Front end React app to interface with open source star wars API, explore information about characters and relations, planets, vehicles, starships and more",
-      techStack: ["React"],
-    },
-    {
-      title: "Timeless BackEnd",
+      title: "Timeless BackEnd and Systems Design",
       github: "https://github.com/Tweed-BGE0/ProductsAPI-Cory",
       gif: "",
       screenshot: "",
-      description: "Back end API and Database for an e-commerce application",
+      description: "Back end API and Database for an e-commerce application. Custom ETL process into postgreSQL database loading over 52 Million records. Defined Routes and queries and maintained <10ms query response time. Containerized API with docker and spun up on AWS EC2 instance, repeated ETL process on seperate EC2 containing a clean postgres db. Added security to the databases instance to only allow communication with the containerized API. Connected front end to api and did light testing handling up to 400 RPS.",
       techStack: ["postgreSQL", "Node.js / Express", "Docker", "AWS"],
     },
     {
@@ -32,6 +25,14 @@ module.exports = {
       screenshot: "",
       description: "Front-end portal for an e-commerce application",
       techStack: ["React", "Node.js / Express"],
+    },
+    {
+      title: "StarWars encyclopedia",
+      github: "https://github.com/CoryZauss/StarWars",
+      gif: "https://user-images.githubusercontent.com/89159410/159531938-3d83a420-bdfd-47d2-a78d-621c53ceee98.gif",
+      screenshot: "",
+      description: "Front end React app to interface with open source star wars API, explore information about characters and relations, planets, vehicles, starships and more",
+      techStack: ["React"],
     },
   ],
 };

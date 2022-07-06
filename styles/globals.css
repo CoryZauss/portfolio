@@ -283,6 +283,7 @@ input:checked + .slider:before {
   display: inline-block;
   font-size: 1rem;
   margin-left: 50%;
+  margin-bottom: 10px;
   width: 15%;
   min-width: 60px;
 }
@@ -298,7 +299,8 @@ input:checked + .slider:before {
 }
 
 .projects-page {
-  margin: 10%;
+  margin-left: 1rem;
+  margin-top: 10px;
   font-size: 1.2rem;
   display: flex;
   flex-wrap: wrap;
@@ -308,10 +310,10 @@ input:checked + .slider:before {
   border: 1px var(--color-primary) solid;
   margin: 1rem;
   padding: 0.5rem;
-  height: 20vw;
-  width: 30vw;
-  max-height: 200px;
-  max-width: 250px;
+  height: 30vw;
+  width: 45vw;
+  max-height: 250px;
+  max-width: 400px;
   position: relative;
 }
 .project-tile:hover {
@@ -350,7 +352,7 @@ input:checked + .slider:before {
 }
 
 /*mobile */
-@media only screen and (min-width: 320px) and (max-width: 848px) {
+@media only screen and (min-width: 320px) and (max-width: 948px) {
   .nav-container {
     flex-direction: column;
     align-items: flex-end;
@@ -414,10 +416,14 @@ input:checked + .slider:before {
   .top-skills {
     flex-direction: column;
   }
+  .projects-page{
+    margin-top: 50vh;
+    margin-left: 20vw;
+  }
 }
 
 /* non mobile only*/
-@media only screen and (min-width: 848px) {
+@media only screen and (min-width: 949px) {
   .side-drawer {
     display: none;
   }
