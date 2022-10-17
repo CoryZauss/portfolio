@@ -8,8 +8,8 @@ export default function Hero() {
         <Image alt="me" src={me} layout="intrinsic" />
       </div>
       <div className="about-section">
-        <p>Hey Im Cory,</p>
-        <li className="about-me">A passionate software engineer</li>
+        <h1>Cory Zauss</h1>
+        <li className="about-me">passionate software engineer</li>
         <li className="about-me-2">Creative Thinker</li>
         <li className="about-me-3">Problem Solver</li>
       </div>
