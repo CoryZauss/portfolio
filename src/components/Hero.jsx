@@ -1,5 +1,5 @@
 import Image from "next/image";
-import me from "../assets/me1.jpg";
+import me from "../assets/me1.png";
 
 export default function Hero() {
   return (
@@ -8,8 +8,8 @@ export default function Hero() {
         <Image alt="me" src={me} layout="intrinsic" />
       </div>
       <div className="about-section">
-        <h1>Cory Zauss</h1>
-        <li className="about-me">passionate software engineer</li>
+        <h1 className="about-name">Cory Zauss</h1>
+        <li className="about-me">Passionate software engineer</li>
         <li className="about-me-2">Creative Thinker</li>
         <li className="about-me-3">Problem Solver</li>
       </div>

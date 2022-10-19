@@ -6,22 +6,22 @@
   --color-button: #3d486c;
   --color-paragraph: #797979;
   --color-button-text: rgb(255, 255, 255);
-  --color-background: rgb(200, 200, 200);
-  --color-anchor: #000aff;
-  --color-selected: #000aff;
-  --color-hover: #000dde;
+  --color-background: #E1E1E1;
+  --color-anchor: #FC5A5A;
+  --color-selected: #FC5A5A;
+  --color-hover: #FC5A5A;
 }
 
 [data-theme="dark"] {
-  --color-primary-accent: #00ff4c;
+  --color-primary-accent: #1E7A71;
   --color-primary: #fff;
-  --color-button: #00ff4c;
+  --color-button: #1E7A71;
   --color-paragraph: #8a8a8a;
   --color-button-text: rgb(0, 0, 0);
   --color-background: #22212b;
-  --color-anchor: #00ff4c;
-  --color-selected: #00ff4c;
-  --color-hover: #00aa4c;
+  --color-anchor: #1E7A71;
+  --color-selected: #2AAC9F;
+  --color-hover: #2AAC9F;
 }
 
 body {
@@ -82,11 +82,11 @@ p {
 }
 
 input:checked + .slider {
-  background-color: #33f321;
+  background-color: #2AAC9F;
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #33f321;
+  box-shadow: 0 0 1px #2AAC9F;
 }
 
 input:checked + .slider:before {
@@ -105,7 +105,7 @@ input:checked + .slider:before {
 
 /* customs */
 .theme-moon {
-  filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg)
+  filter: invert(55%) sepia(100%) saturate(3.5)
     brightness(118%) contrast(119%);
 }
 .theme-sun {
@@ -229,7 +229,7 @@ input:checked + .slider:before {
 }
 
 .my-pic {
-  border: 2px var(--color-selected) solid;
+  border: 3px var(--color-selected) solid;
   border-radius: 50%;
   width: 16rem;
   height: 15rem;
@@ -252,6 +252,9 @@ input:checked + .slider:before {
   margin-left: 35px;
 }
 
+.about-name {
+  font-size: 3.5em;
+}
 /*about page*/
 .about-section {
   margin-left: 15%;
@@ -419,6 +422,9 @@ input:checked + .slider:before {
   .projects-page{
     margin-top: 50vh;
     margin-left: 20vw;
+  }
+  .about-name {
+  font-size: 2em;
   }
 }
 
