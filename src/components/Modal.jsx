@@ -1,9 +1,10 @@
 import React from "react";
 import Image from "next/image";
 
-const Modal = ({ toggle, project }) => {
+const Modal = ({ toggle, project, fadeIn }) => {
   return (
-    <div className="modal-tile">
+    <div
+      className={`modal-tile ${fadeIn ? "show" : ""}`}>
       <div className="modal-title">{project.title}</div>
       <div>
         {project.gif && (
@@ -19,10 +20,16 @@ const Modal = ({ toggle, project }) => {
       {project.description}
       <div className="modal-title">{`TechStack: `}</div>
       {project.techStack}
-      <div>check out the {project.title} <a href={project.github} target="_blank" rel="noreferrer" className="github-link">{` Github Repo`}</a></div>
-
+      <div>
+        check out the {project.title}{" "}
+        <a
+          href={project.github}
+          target="_blank"
+          rel="noreferrer"
+          className="github-link"
+        >{` Github Repo`}</a>
+      </div>
     </div>
-
   );
 };
 

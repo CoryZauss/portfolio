@@ -8,9 +8,10 @@ const SideDrawer = ({
   changetheme,
   changecomponent,
   current,
+  className
 }) => {
   return (
-    <div className="side-drawer">
+    <div className={`side-drawer ${className}`}>
       <div className="inside-toggle">
         <DrawerToggle toggle={toggle} />
       </div>

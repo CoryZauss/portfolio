@@ -8,8 +8,8 @@ import idk from "../assets/skill-icons/react.png";
 
 export default function About() {
   return (
-    <div className="about-page">
-        <div className="about-title">Top Skils</div>
+    <div className="about-page ">
+      <div className="about-title">Top Skils</div>
       <div className="top-skills">
         <div className="skills">
           <p>JavaScript</p>
@@ -29,10 +29,9 @@ export default function About() {
             <Image src={nodeicon} alt="react icon"></Image>
           </div>
         </div>
-
       </div>
       <br></br>
-      <div>
+      <div className="about-text">
         <div className="about-title">About Me</div>
         <br></br>
         <p>{`I began my coding journey a couple months after the beginning of the pandemic when a friend introduced me to JavaScript and gave me some resources to check out.`}</p>

@@ -61,19 +61,24 @@ const Home = () => {
   return (
     <>
       <div className="page-container">
-        {drawerOpen && <BackDrop toggle={toggleDrawer} />}
+        {drawerOpen && (
+          <BackDrop
+            className={drawerOpen ? "show" : ""}
+            toggle={toggleDrawer}
+          />
+        )}
         <div className="burger">
           <DrawerToggle toggle={toggleDrawer} />
         </div>
-        {drawerOpen && (
-          <SideDrawer
-            toggle={toggleDrawer}
-            darktheme={darkTheme}
-            changetheme={handleToggle}
-            changecomponent={toggleComp}
-            current={currentComponent}
-            />
-            )}
+
+        <SideDrawer
+          className={drawerOpen ? "open" : ""}
+          toggle={toggleDrawer}
+          darktheme={darkTheme}
+          changetheme={handleToggle}
+          changecomponent={toggleComp}
+          current={currentComponent}
+        />
 
         <div className="navbar">
           <Nav
@@ -83,10 +88,11 @@ const Home = () => {
             current={currentComponent}
           />
         </div>
-        <main className="main">
-          {currentComponent === 'home' && <Hero />}
-          {currentComponent === 'projects' && <Projects />}
-          {currentComponent === 'about' && <About />}
+        <main className="main ">
+          <div className="hero-background" />
+          {currentComponent === "home" && <Hero />}
+          {currentComponent === "projects" && <Projects />}
+          {currentComponent === "about" && <About />}
         </main>
         <Socials />
       </div>

@@ -8,32 +8,44 @@ import Modal from "./Modal";
 export default function Projects() {
   const [showModal, setShowModal] = useState(false);
   const [modalProject, setModalProject] = useState({});
+  const [fadeIn, setFadeIn] = useState(false);
 
-  const toggleModal = () => {
-    setShowModal(!showModal);
-    if (showModal) {
-      setModalProject({});
+
+  const toggleModal = (project = {}) => {
+    setModalProject(project)
+    setShowModal((prev) => !prev)
+    if (!showModal) {
+      setTimeout(() => {
+        setFadeIn(true)
+      }, 100);
+    } else {
+      setFadeIn(false)
     }
   };
+
+
 
   return (
     <>
       {showModal && <BackDrop toggle={toggleModal} />}
-      {showModal && <Modal project={modalProject} toggle={toggleModal} />}
-      <div className="projects-page">
+      {showModal && (
+        <Modal project={modalProject} fadeIn={fadeIn} toggle={toggleModal} />
+      )}
+
+      <div className="projects-page ">
+        
         {projects.projects.map((project) => {
-          let currentScreen =
-            project.gif === "" ? defaultPic : project.gif ;
+          let currentScreen = project.gif === "" ? defaultPic : project.gif;
           return (
             <div
-              key={project.title}
-              onClick={() => {
-                setModalProject(project);
-                toggleModal();
-              }}
+            key={project.title}
+            onClick={() => {
+              setModalProject(project);
+              toggleModal(project);
+            }}
             >
               <div className="project-title">{project.title}</div>
-              <div className="project-tile">
+              <div className="project-tile ">
                 <div>
                   {project ? (
                     <Image

@@ -3,7 +3,8 @@ import me from "../assets/me1.png";
 
 export default function Hero() {
   return (
-    <div className="home">
+    <div >
+
       <div className="my-pic">
         <Image alt="me" src={me} layout="intrinsic" />
       </div>

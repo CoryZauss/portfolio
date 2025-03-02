@@ -9,7 +9,9 @@
   --color-background: #E1E1E1;
   --color-anchor: #FC5A5A;
   --color-selected: #FC5A5A;
+  --color-outline: black;
   --color-hover: #FC5A5A;
+  --color-bg-main: linear-gradient(to right, #E1E1E1 1%, #ff7e5f 99%);
 }
 
 [data-theme="dark"] {
@@ -21,7 +23,9 @@
   --color-background: #22212b;
   --color-anchor: #1E7A71;
   --color-selected: #2AAC9F;
+  --color-outline: white;
   --color-hover: #2AAC9F;
+  --color-bg-main: linear-gradient(to right, #22212b, #2AAC9F)
 }
 
 body {
@@ -150,10 +154,16 @@ input:checked + .slider:before {
   position: fixed;
   top: 0;
   right: 0;
-  width: 70%;
+  width: 65%;
   z-index: 300;
   font-size: 64px;
   padding-right: 10px;
+  transform: translateX(100%); /* Start off-screen */
+  transition: transform 0.3s ease-out;
+}
+
+.side-drawer.open {
+  transform: translateX(0); /* Slide into view */
 }
 
 .backdrop {
@@ -162,7 +172,8 @@ input:checked + .slider:before {
   width: 200%;
   height: 200%;
   background-color: rgba(0, 0, 0, 0.8);
-  z-index: 200;
+  z-index: 250;
+  transition: opacity 3s ease-out;
 }
 
 .inside-toggle {
@@ -176,7 +187,6 @@ input:checked + .slider:before {
   margin-top: 10px;
 }
 
-.socials,
 .nav-container {
   display: flex;
   height: 4rem;
@@ -189,7 +199,13 @@ input:checked + .slider:before {
 }
 
 .socials {
+  position: fixed; /* Keeps it in place */
+  bottom: 0; /* Sticks to the bottom */
+  left: 0;
+  width: 100%; /* Stretches across the screen */
+  display: flex;
   justify-content: center;
+
 }
 
 .icon {
@@ -216,25 +232,43 @@ input:checked + .slider:before {
 /* main area /hero section */
 .main {
   display: flex;
-  height: 70vh;
+  height: 80vh;
   flex-direction: column;
   justify-content: center;
-  overflow: scroll;
+  overflow: auto;
   -ms-overflow-style: none;
   scrollbar-width: none; /* Firefox */
+
 }
 
 .main::-webkit-scrollbar {
   display: none;
 }
 
+.hero-background {
+  position:absolute;
+  width: 99%;
+  height: 80%;
+  background: var(--color-bg-main);
+  z-index: -1;
+  border-top-right-radius: 30rem;
+  border-bottom-right-radius: 30rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
 .my-pic {
-  border: 3px var(--color-selected) solid;
+  border: 3px var(--color-outline) solid;
   border-radius: 50%;
+  box-sizing: border-box;
   width: 16rem;
   height: 15rem;
   overflow: hidden;
   margin-left: 20%;
+  margin-top: 2rem;
+
 }
 
 .about-me {
@@ -260,6 +294,11 @@ input:checked + .slider:before {
   margin-left: 15%;
   font-size: 1.2rem;
 }
+
+.about-text {
+  width:80%;
+}
+
 .about-title {
   text-decoration: underline;
 }
@@ -303,8 +342,8 @@ input:checked + .slider:before {
 }
 
 .projects-page {
-  margin-left: 1rem;
-  margin-top: 10px;
+  justify-content:center;
+
   font-size: 1.2rem;
   display: flex;
   flex-wrap: wrap;
@@ -319,16 +358,36 @@ input:checked + .slider:before {
   max-height: 250px;
   max-width: 400px;
   position: relative;
-}
-.project-tile:hover {
-  border: var(--color-selected) 1px solid;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
 }
 
-.projects-page {
-  margin-top: 10rem;
+.project-tile:hover {
+  transform: scale(1.50);
+  z-index: 10;
+  border: var(--color-selected) 2px solid;
+}
+
+.project-title{
+  display:flex;
+  justify-content:center;
+  font-size: 1.2rem;
 }
 
 /*MODAL*/
+
+/* .modal-tile {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 20%;
+  z-index: 300;
+  background: var(--color-background);
+  border: 2px var(--color-selected) solid;
+  position: fixed;
+  padding: 1rem;
+  border-radius: 6px;
+} */
 
 .modal-tile {
   display: flex;
@@ -337,11 +396,20 @@ input:checked + .slider:before {
   margin: 20%;
   z-index: 300;
   background: var(--color-background);
-  border: 1px var(--color-selected) solid;
+  border: 2px var(--color-selected) solid;
   position: fixed;
   padding: 1rem;
   border-radius: 6px;
+  opacity: 0; /* Start with opacity 0 */
+  transform: scale(0.5); /* Start slightly scaled down */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Add transition for opacity and scale */
 }
+
+.modal-tile.show {
+  opacity: 1; /* Fade in by setting opacity to 1 */
+  transform: scale(1); /* Scale to normal size */
+}
+
 .modal-title {
   color: var(--color-selected);
 }
@@ -361,6 +429,20 @@ input:checked + .slider:before {
     flex-direction: column;
     align-items: flex-end;
   }
+
+  .hero-background {
+  position:absolute;
+  width: 99%;
+  height: 85%;
+  background: var(--color-bg-main);
+  z-index: -1;
+  border-top-right-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+}
 
   .icon {
     width: 3rem;
@@ -405,7 +487,11 @@ input:checked + .slider:before {
   }
 
   .main {
-    height: 70vh;
+    height: 85vh;
+  }
+
+  .burger{
+    height: 3rem;
   }
 
   .modal-tile {

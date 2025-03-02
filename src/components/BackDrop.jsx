@@ -1,11 +1,7 @@
 import React from 'react';
 
-const BackDrop = ({toggle}) => {
-  return (
-
-    <div className="backdrop" onClick={toggle}></div>
-
-  )
+const BackDrop = ({className, toggle}) => {
+  return <div className={`backdrop ${className}`} onClick={toggle}></div>;
 };
 
 export default BackDrop;
